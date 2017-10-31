@@ -1,4 +1,23 @@
-# CONTRIBUTING
+# Contributing to MentalHues repository 
+Thanks for finding out how to get involved! We want contributors for all aspects of this project. The most important criteria involves having an interest in the mission of destigmatization of mental health disorders. We need people who want to learn how to understand mental health disorders better and who want to improve misunderstandings.
+
+If you have any questions that have not been addressed here, please ask! You can do so by checking out the [Share Your Thoughts](#share-your-thoughts) section below. This section also provides a direction for checking out Issues that have already been started so you can help answer the questions of others.
+
+
+Scroll down or jump to one of the following sections:
+
+* [Share your thoughts](#share-your-thoughts)
+  * [A description of the different labels](#labels)
+* [Make a change](#make-a-change)
+* [Recognising contributions](#recognising-contributions)
+* [Get in touch](#how-to-get-in-touch)
+
+## Share Your Thoughts
+Now that you are reading this section, you are a contributer. Welcome to the team! This project needs contributors who can share insights, ask questions, and provide new ideas in the form of comments, adding issues, writing code, and more.
+
+Labels help keep the different contributions organzized so we can all provide our input in our desired mediums.
+
+Make sure you are familiar with [discussing changes in issues](https://guides.github.com/features/issues/) before you get started.
 
 ## Pull Requests
 1. Fork the repo (if you haven't already done so)
