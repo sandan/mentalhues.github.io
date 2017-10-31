@@ -54,11 +54,15 @@ Members of the community who violate these rules - no matter how much they have 
 
 ## Attribution
 
-This Code of Conduct is adapted from the code of conduct developed by [Kirstie Whitaker][kirstie-github] for the [Brain Networks in Python][bnip-repo] project and the [Contributor Covenant][contributor-covenant-home], version 1.4, available at [http://contributor-covenant.org/version/1/4][contributor-covenant-version]. Both are licensed as [CC-BY 4.0][ccby-link].
+This Code of Conduct is adapted from the Code of Conduct developed by [Kirstie Whitaker][kirstie-github] for the [Brain Networks in Python][bnip-repo] project and the [Contributor Covenant][contributor-covenant-home], version 1.4, available at [http://contributor-covenant.org/version/1/4][contributor-covenant-version]. Both are licensed as [CC-BY 4.0][ccby-link]. It also builds on the [Mozilla Science Lab's][mozilla-science-home] [Code of Conduct][mozilla-science-coc] which is in the public domain under a [CC0 license][cc0-link].
+
+The Mental Hues Code of Conduct was developed by [Kirstie Whitaker][kirstie-github] and [Erin Cole][erin-github] and is provided under a [CC-BY 4.0][ccby-link] license, which means that anyone can remix and reuse the content provided here, without seeking additional permission, so long as it is attributed back to the [Mental Hues][mentalhues-repo] project. Please remember to also attribute the [Brain Networks in Python][bnip-repo] project and [Contributor Covenant][contributor-covenant-home].
 
 
 [contributor-covenant-home]: http://contributor-covenant.org
 [contributor-covenant-version]: http://contributor-covenant.org/version/1/4
 [ccby-link]: https://creativecommons.org/licenses/by/4.0
 [kirstie-github]: https://github.com/kirstiejane
+[erin-github]: https://github.com/erindcole
 [bnip-repo]: https://github.com/WhitakerLab/BrainNetworksInPython
+[mentalhues-repo]: https://github.com/erindcole/mentalhues
