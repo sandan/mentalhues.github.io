@@ -1,6 +1,8 @@
 # Contributing to MentalHues repository 
 Thanks for finding out how to get involved! We want contributors for all aspects of this project. The most important criteria involves having an interest in the mission of destigmatization of mental health disorders. We need people who want to learn how to understand mental health disorders better and who want to improve misunderstandings.
 
+First and formost, it is crucial that we all stick to the [Code of Conduct](https://github.com/erindcole/mentalhues/blob/master/CODE_OF_CONDUCT.md) in order to maintain a caring, collaborative project space. We all are aware of the sensitivity needed to discuss mental health, so let's keep it going ::heart::
+
 If you have any questions that have not been addressed here, please ask! You can do so by checking out the [Share Your Thoughts](#share-your-thoughts) section below. This section also provides a direction for checking out Issues that have already been started so you can help answer the questions of others.
 
 
