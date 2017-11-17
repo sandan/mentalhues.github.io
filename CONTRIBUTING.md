@@ -8,39 +8,36 @@ Scroll down or jump to one of the following sections:
 
 * [Share your thoughts](#share-your-thoughts)
   * [A description of the different labels](#labels)
-* [Make a change](#make-a-change)
-* [Recognising contributions](#recognising-contributions)
-* [Get in touch](#how-to-get-in-touch)
+* [Make a Change](#make-a-change)
+* [Recognizing Contributions](#recognizing-contributions)
+* [Get in Touch](#how-to-get-in-touch)
 
 ## Share Your Thoughts
-Now that you are reading this section, you are a contributer. Welcome to the team! This project needs contributors who can share insights, ask questions, and provide new ideas in the form of comments, adding issues, writing code, and more.
-
-Labels help keep the different contributions organzized so we can all provide our input in our desired mediums.
+Now that you are reading this section, you are a contributer. Welcome to the project! This project needs contributors who can share insights, ask questions, and provide new ideas in the form of comments, adding issues, writing code, and more.
 
 Make sure you are familiar with [discussing changes in issues](https://guides.github.com/features/issues/) before you get started.
 
-## Pull Requests
-1. Fork the repo (if you haven't already done so)
-2. Clone it to your computer
-3. When you're ready to work on an issue, be sure you're on the **master** branch. From there,
-[create a separate branch](https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches)
-(e.g. issue_32)
-4. Make your changes. If you're unsure of some details while you're making edits, you can
-discuss them on the ticket.
-5. Commit your changes
-6. Push the working branch (e.g. issue_32) to your remote fork and make your pull request
-    * Do not merge it with the master branch on your fork. That would result in multiple, or
-    unrelated patches being included in a single PR.
-7. If any further changes need to be made, comments will be made on the pull request.
+We want to communicate our contributions to the community through **issues**. Labels help keep the different types of issues organized. The descriptions of lables are below.
 
-It's possible to work on two or more different patches (and therefore multiple branches) at
-one time, but it's recommended that beginners only work on one patch at a time.
+### Labels
 
-### Syncing ###
-Periodically, especially before starting a new patch, you'll need the sync your
-repo with the remote upstream. GitHub has instructions for doing this:
+## Make a Change
 
-1. [Configuring a remote for a fork](https://help.github.com/articles/configuring-a-remote-for-a-fork/)
-    * For step 3 on that page, use https://github.com/erindcole/mentalhues for the URL.
-2. [Syncing a Fork](https://help.github.com/articles/syncing-a-fork/)
-    * On that page, it shows how to merge the **master** branch (steps 4 & 5 of **Syncing a Fork**).
+    1. First, describe what you're planning to do as a comment to the issue. After adding the comment, you may need to make a new issue for your contribution. Check in with one of the Mental Hues Core Contributors to ensure you aren't overlapping with current developing contributions and that everyone is on the same page with the goal of your contributing idea.
+
+    [This blog post](https://www.igvita.com/2011/12/19/dont-push-your-pull-requests/) explains why we want to contribute with Issues.
+
+    2. Fork (https://help.github.com/articles/fork-a-repo/) the Mental Hues project repo (https://github.com/erindcole/mentalhues/) to your profile.
+
+    You can now do whatever you want with this copy of the project. You won't mess up anyone else's work so you're super safe.
+
+    Make sure to [keep your fork up to date] (https://github.com/KirstieJane/STEMMRoleModels/wiki/Syncing-your-fork-to-the-original-repository-via-the-browserwith) the master repository.
+
+    3. Make the changes you've discussed.
+
+    Try to keep the changes focused rather than changing lots of things at once. If you feel tempted to branch out then please *literally* branch out: create [separate branches] (https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/ )for different updates to make the next step much easier!
+
+    4. Submit a [pull request](https://help.github.com/articles/creating-a-pull-request/).
+
+    A member of the Core Contributors will review your changes, have a bit of discussion and hopefully merge them in!
+    You don't have to be ready to merge to make a pull request! We encourage you to submit a pull request as early as you want to. They help us to keep track of progress and help you to get earlier feedback.
