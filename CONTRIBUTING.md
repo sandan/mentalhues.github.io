@@ -5,6 +5,7 @@ First and formost, it is crucial that we all stick to the [Code of Conduct](http
 
 If you have any questions that have not been addressed here, please ask! You can do so by checking out the [Share Your Thoughts](#share-your-thoughts) section below. This section also provides a direction for checking out Issues that have already been started so you can help answer the questions of others.
 
+If you need a more private channel for contact please email me directly: erincole567@gmail.com . I realize that some issues need to be taken offline, and am open to that need. In order to connect with other contributors, we also have a [public Gitter chat](https://gitter.im/mentalhues/Lobby). Because I want to be transparent, I want to mention that the Core Contributors of this project have a private Gitter chat that we use as a safe space to share insights and ideas. We have a concern for laying effective groundwork for this project, and may make this private chat public in the future if we feel that a public chat would be more conducive to working open.  
 
 Scroll down or jump to one of the following sections:
 
@@ -25,7 +26,7 @@ We want to communicate our contributions to the community through **issues**. La
 
 ## Make a Change
 
-1. First, describe what you're planning to do as a comment to the issue. After adding the comment, you may need to make a new issue for  your contribution. Check in with one of the Mental Hues Core Contributors to ensure you aren't overlapping with current developing contributions and that everyone is on the same page with the goal of your contributing idea.
+1. First, describe what you're planning to do as a comment to the issue. After adding the comment, you may need to make a new issue for  your contribution. Check in with one of the Mental Hues Core Contributors to ensure you aren't overlapping with current developing contributions and that everyone is on the same page with the goal of your contributing idea. You can contact Core Contributors through the [public Gitter chat](https://gitter.im/mentalhues/Lobby).
 
 [This blog post](https://www.igvita.com/2011/12/19/dont-push-your-pull-requests/) explains why we want to contribute with Issues.
 
