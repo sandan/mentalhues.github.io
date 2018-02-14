@@ -10,7 +10,6 @@
 ### The entire purpose of this project, from being made to being used, aims to diminish stigma associated with mental health disorders.
 
 # Get Involved!
-### Even at the beginning stages, there are a lot of ways to help!
-### Planning/Brainstorming:
+### First and foremost, please check out the [Code of Conduct][https://github.com/erindcole/mentalhues/blob/master/CODE_OF_CONDUCT.md] and [Contributing Guidelines.][https://github.com/erindcole/mentalhues/blob/master/CONTRIBUTING.md] After you have a solid understanding of how the project works, check out the [Issues][https://github.com/erindcole/mentalhues/issues] and get started!
 # Attiribution
-### Descriptions of this file can be found in an interview with [Erin Cole] [https://github.com/erindcole] and Abby Mayes from [Mozilla Open Leaders] [https://mozilla.github.io/leadership-training/] Checkt out the full interview here when it is published!
+### Descriptions of this file can be found in an interview with [Erin Cole][https://github.com/erindcole] and Abby Mayes from [Mozilla Open Leaders][https://mozilla.github.io/leadership-training/] Check out the full interview here when it is published!
