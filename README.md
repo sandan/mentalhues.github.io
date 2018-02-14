@@ -13,5 +13,5 @@
 # Get Involved!
 ### First and foremost, please check out the [Code of Conduct](https://github.com/erindcole/mentalhues/blob/master/CODE_OF_CONDUCT.md) and [Contributing Guidelines.](https://github.com/erindcole/mentalhues/blob/master/CONTRIBUTING.md) After you have a solid understanding of how the project works, check out the [Issues](https://github.com/erindcole/mentalhues/issues) and get started!
 
-# Attiribution
+# Attribution
 ### Descriptions of this file can be found in an interview with [Erin Cole](https://github.com/erindcole) and Abby Mayes from [Mozilla Open Leaders](https://mozilla.github.io/leadership-training/) Check out the full interview here when it is published!
