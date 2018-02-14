@@ -1,4 +1,4 @@
-# Contributing to MentalHues repository 
+# Contributing to Mental Hues Repository 
 Thanks for finding out how to get involved! We want contributors for all aspects of this project. The most important criteria involves having an interest in the mission of destigmatization of mental health disorders. We need people who want to learn how to understand mental health disorders better and who want to improve misunderstandings.
 
 First and formost, it is crucial that we all stick to the [Code of Conduct](https://github.com/erindcole/mentalhues/blob/master/CODE_OF_CONDUCT.md) in order to maintain a caring, collaborative project space. We all are aware of the sensitivity needed to discuss mental health, so let's keep it going ::heart::
@@ -43,3 +43,5 @@ Try to keep the changes focused rather than changing lots of things at once. If 
 4. Submit a [pull request](https://help.github.com/articles/creating-a-pull-request/).
 
 A member of the Core Contributors will review your changes, have a bit of discussion and hopefully merge them in! You don't have to be ready to merge to make a pull request! We encourage you to submit a pull request as early as you want to. They help us to keep track of progress and help you to get earlier feedback.
+## Attribution
+This Contributing Guidelines is adapted from the Contributing Guidelines developed by [Isla Staden](https://github.com/Islast) for the [Brain Networks in Python](https://github.com/Islast/BrainNetworksInPython) and written by [Erin Cole.](https://github.com/erindcole)
