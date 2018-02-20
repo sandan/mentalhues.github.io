@@ -35,7 +35,7 @@ Descriptions of Some Labels:
 2. [Fork](https://help.github.com/articles/fork-a-repo/) the [Mental Hues project repo](https://github.com/erindcole/mentalhues/) to your profile.
    You can now do whatever you want with this copy of the project. You won't mess up anyone else's work so you're super safe.
 
-   Make sure to [keep your fork up to date](https://github.com/KirstieJane/STEMMRoleModels/wiki/Syncing-your-fork-to-the-original-    repository-via-the-browserwith) the master repository.
+   Make sure to [keep your fork up to date](https://github.com/KirstieJane/STEMMRoleModels/wiki/Syncing-your-fork-to-the-original-    repository-via-the-browser) with the master repository.
 
 3. Make the changes you've discussed.
 
@@ -45,4 +45,4 @@ Descriptions of Some Labels:
 
    A member of the Core Contributors will review your changes, have a bit of discussion and hopefully merge them in! You don't have to be    ready to merge to make a pull request! We encourage you to submit a pull request as early as you want to. They help us to keep track of progress and help you to get earlier feedback.
 ## Attribution
-This Contributing Guidelines is adapted from the Contributing Guidelines developed by [Isla Staden](https://github.com/Islast) for the [Brain Networks in Python](https://github.com/Islast/BrainNetworksInPython) and written by [Erin Cole.](https://github.com/erindcole)
+This Contributing Guidelines is adapted from the Contributing Guidelines developed by [Kirstie Whitaker](https://github.com/kirstiejane) and  [Isla Staden](https://github.com/Islast) for the [Brain Networks in Python](https://github.com/Islast/BrainNetworksInPython) and written by [Erin Cole.](https://github.com/erindcole)
