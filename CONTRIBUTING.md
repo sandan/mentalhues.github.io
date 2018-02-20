@@ -35,7 +35,7 @@ Descriptions of Some Labels:
 2. [Fork](https://help.github.com/articles/fork-a-repo/) the [Mental Hues project repo](https://github.com/erindcole/mentalhues/) to your profile.
    You can now do whatever you want with this copy of the project. You won't mess up anyone else's work so you're super safe.
 
-   Make sure to [keep your fork up to date](https://github.com/KirstieJane/STEMMRoleModels/wiki/Syncing-your-fork-to-the-original-    repository-via-the-browser) with the master repository.
+   Make sure to [keep your fork up to date](https://github.com/KirstieJane/STEMMRoleModels/wiki/Syncing-your-fork-to-the-original-repository-via-the-browser) with the master repository.
 
 3. Make the changes you've discussed.
 
