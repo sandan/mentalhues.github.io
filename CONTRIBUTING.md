@@ -10,7 +10,6 @@ If you need a more private channel for contact please email me directly: erincol
 Scroll down or jump to one of the following sections:
 
 * [Share your thoughts](#share-your-thoughts)
-  * [A description of the different labels](#labels)
 * [Make a Change](#make-a-change)
 * [Recognizing Contributions](#recognizing-contributions)
 * [Get in Touch](#how-to-get-in-touch)
@@ -20,11 +19,10 @@ Now that you are reading this section, you are a contributer. Welcome to the pro
 
 Make sure you are familiar with [discussing changes in issues](https://guides.github.com/features/issues/) before you get started.
 
-We want to communicate our contributions to the community through **issues**. Labels help keep the different types of issues organized. The descriptions of lables are below.
+We want to communicate our contributions to the community through **issues**. 
 
 ### Labels
-Labels will help guide you as you decide how you want to contribute. Check out the [current list of labels](https://github.com/erindcole/mentalhues/labels).
-Descriptions of Some Labels:
+Labels will help guide you as you decide how you want to contribute. Labels help keep the different types of issues organized. Check out the [current list of labels](https://github.com/erindcole/mentalhues/labels).
 
 ## Make a Change
 
@@ -44,5 +42,7 @@ Descriptions of Some Labels:
 4. Submit a [pull request](https://help.github.com/articles/creating-a-pull-request/).
 
    A member of the Core Contributors will review your changes, have a bit of discussion and hopefully merge them in! You don't have to be    ready to merge to make a pull request! We encourage you to submit a pull request as early as you want to. They help us to keep track of progress and help you to get earlier feedback.
+
 ## Attribution
+
 This Contributing Guidelines is adapted from the Contributing Guidelines developed by [Kirstie Whitaker](https://github.com/kirstiejane) and  [Isla Staden](https://github.com/Islast) for the [Brain Networks in Python](https://github.com/Islast/BrainNetworksInPython) and written by [Erin Cole.](https://github.com/erindcole)
