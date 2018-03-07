@@ -1,17 +1,14 @@
 # Contributing to Mental Hues Repository 
 Thanks for finding out how to get involved! We want contributors for all aspects of this project. The most important criteria involves having an interest in the mission of destigmatization of mental health disorders. We need people who want to learn how to understand mental health disorders better and who want to improve misunderstandings.
 
-First and formost, it is crucial that we all stick to the [Code of Conduct](https://github.com/erindcole/mentalhues/blob/master/CODE_OF_CONDUCT.md) in order to maintain a caring, collaborative project space. We all are aware of the sensitivity needed to discuss mental health, so let's keep it going ::heart::
+First and formost, it is crucial that we all stick to the [Code of Conduct](https://github.com/erindcole/mentalhues/blob/master/CODE_OF_CONDUCT.md) in order to maintain a caring, collaborative project space. We all are aware of the sensitivity needed to discuss mental health, so let's keep it going :heart:
 
-If you have any questions that have not been addressed here, please ask! You can do so by checking out the [Share Your Thoughts](#share-your-thoughts) section below. This section also provides a direction for checking out Issues that have already been started so you can help answer the questions of others.
-
-If you need a more private channel for contact please email me directly: erincole567@gmail.com . I realize that some issues need to be taken offline, and am open to that need. In order to connect with other contributors, we also have a [public Gitter chat](https://gitter.im/mentalhues/Lobby). Because I want to be transparent, I want to mention that the Core Contributors of this project have a private Gitter chat that we use as a safe space to share insights and ideas. We have a concern for laying effective groundwork for this project, and may make this private chat public in the future if we feel that a public chat would be more conducive to working open.  
+If you have any questions that have not been addressed here, please ask! You can do so by checking out the [Share Your Thoughts](#share-your-thoughts) section below, or [Get in Touch](#how-to-get-in-touch) with the Core Contributors. This section also provides a direction for checking out Issues that have already been started so you can help answer the questions of others.
 
 Scroll down or jump to one of the following sections:
 
 * [Share your thoughts](#share-your-thoughts)
 * [Make a Change](#make-a-change)
-* [Recognizing Contributions](#recognizing-contributions)
 * [Get in Touch](#how-to-get-in-touch)
 
 ## Share Your Thoughts
@@ -42,6 +39,10 @@ Labels will help guide you as you decide how you want to contribute. Labels help
 4. Submit a [pull request](https://help.github.com/articles/creating-a-pull-request/).
 
    A member of the Core Contributors will review your changes, have a bit of discussion and hopefully merge them in! You don't have to be    ready to merge to make a pull request! We encourage you to submit a pull request as early as you want to. They help us to keep track of progress and help you to get earlier feedback.
+
+## How to Get in Touch
+
+If you need a more private channel for contact please email me directly: erincole567@gmail.com . I realize that some issues need to be taken offline, and am open to that need. In order to connect with other contributors, we also have a [public Gitter chat](https://gitter.im/mentalhues/Lobby). Because I want to be transparent, I want to mention that the Core Contributors of this project have a private Gitter chat that we use as a safe space to share insights and ideas. We have a concern for laying effective groundwork for this project, and may make this private chat public in the future if we feel that a public chat would be more conducive to working open.
 
 ## Attribution
 
