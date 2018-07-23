@@ -17,5 +17,7 @@ The entire purpose of this project, from being made to being used, aims to dimin
 ## Get Involved!
 First and foremost, please check out the [Code of Conduct](https://github.com/erindcole/mentalhues/blob/master/CODE_OF_CONDUCT.md) and [Contributing Guidelines.](https://github.com/erindcole/mentalhues/blob/master/CONTRIBUTING.md) After you have a solid understanding of how the project works, check out the [Issues](https://github.com/erindcole/mentalhues/issues) and get started!
 
+We are currently collecting example stories and hues to help build the website. These stories are not annonymous, and will be linked to your Github profile if you choose to contribute. When the site is built, Stories and Hues will be submitted annonymously. If you would like to contribute a story to help build the site, please feel free to add to the folder `example-hues` in the repo.
+
 ## More Information
 Descriptions of this file can be found in an interview with [Erin Cole](https://github.com/erindcole) and Abby Mayes from [Mozilla Open Leaders](https://mozilla.github.io/leadership-training/) Check out the full interview here when it is published!
