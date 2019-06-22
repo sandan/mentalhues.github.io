@@ -23,7 +23,7 @@ Labels will help guide you as you decide how you want to contribute. Labels help
 
 ## Make a Change
 
-1. First, describe what you're planning to do as a comment to the issue. After adding the comment, you may need to make a new issue for  your contribution. Check in with one of the Mental Hues Core Contributors to ensure you aren't overlapping with current developing contributions and that everyone is on the same page with the goal of your contributing idea. You can contact Core Contributors through the [public Gitter chat](https://gitter.im/mentalhues/Lobby).
+1. First, describe what you're planning to do as a comment to an existing issue. A core contributer to the project will follow up with you. Check in with one of the Mental Hues Core Contributors to ensure you aren't overlapping with current developing contributions and that everyone is on the same page with the goal of your contributing idea. You can contact Core Contributors through the [public Gitter chat](https://gitter.im/mentalhues/Lobby).
 
     [This blog post](https://www.igvita.com/2011/12/19/dont-push-your-pull-requests/) explains why we want to contribute with Issues.
 
