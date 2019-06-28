@@ -6,7 +6,7 @@ Give a high level description on what is this PR for in one or two sentences.
 * **Related Issues/Enhancements/Bugs/etc.**
 Enter (preferably all) related user stories/
 
-**List all important changes made**
+* **List all important changes made**
  List the changes in bullet points. Reasonable detail is expected but it is up to the developer to explain the changes concisely.
  List if any functions or files were renamed.
 
