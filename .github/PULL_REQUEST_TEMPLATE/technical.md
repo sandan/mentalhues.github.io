@@ -17,7 +17,6 @@ Give a high level description on what is this PR for in one or two sentences.
 
 ## Reviewers
 - Use @mentions to specify the reviewers for your PR.
-- Since we are a short team, lets try to include as many of us as possible for now.
 
 # CHECKLIST:
 Make sure all items are marked when you submit the pull-request.

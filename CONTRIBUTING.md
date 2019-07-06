@@ -22,10 +22,16 @@ We want to communicate our contributions to the community through **issues**.
 Labels will help guide you as you decide how you want to contribute. Labels help keep the different types of issues organized. Check out the [current list of labels](https://github.com/erindcole/mentalhues/labels).
 
 ## Submit a Hue
-Hues are topics related to mental health. Examples of Hues include test anxiety, paranoia, and how to feel understood. We are collecting example stories and hues to help build the website! When the site is built, Hues will be submitted anonymously. Currently there are two ways to submit a Hue:
+Hues are topics related to mental health. Examples of Hues include test anxiety, paranoia, and how to feel understood. We are collecting example stories and hues to help build the website! Currently there are two ways to submit a Hue:
 
-1. Submit the story via Pull Request under the `example-hues` folder. These stories are not anonymous, and will be linked to your Github profile if you choose to contribute. If you are not famililar with how to open a Pull Request, read the [Make a Change](#make-a-change) section. A pull request that includes a new Hue under `example-hues` should include the Hue label. A core contributor will review the Pull Request for acceptance.
-2. If you would like to contribute a story anonymously, please email me directly at erincole567@gmail.com and I can submit it on your behalf. I treat all direct contacts via email as confidential.
+1. Submit the story via Pull Request under the `example-hues` folder. 
+2. Email me directly at erincole567@gmail.com and I can submit it on your behalf. I treat all direct contacts via email as confidential.
+
+If you are not famililar with how to open a Pull Request, read the [Make a Change](#make-a-change) section. A pull request that includes a new Hue under the `example-hues/` directory should include the "'Hue" label. A core contributor will review the Pull Request.
+
+When the site is built, Hues will be submitted anonymously. To submit a Hue anonymously for now:
+- via a Pull Request, attribute the story as "On behalf of Anonymous" or similar in the description or as a comment in the Pull Request.
+- via email, just let us know if you would like it to be anonymous (or not).
 
 ## Make a Change
 

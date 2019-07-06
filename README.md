@@ -16,7 +16,7 @@ The entire purpose of this project, from being made to being used, aims to dimin
 First and foremost, please check out the [Code of Conduct](https://github.com/erindcole/mentalhues/blob/master/CODE_OF_CONDUCT.md) and [Contributing Guidelines.](https://github.com/erindcole/mentalhues/blob/master/CONTRIBUTING.md) Then, check out the [Issues](https://github.com/erindcole/mentalhues/issues) to add to the contributions of the project.
 
 ### Submit a Hue
-We are [collecting example stories and hues]() to help build the website!
+We are [collecting example stories and hues](https://github.com/sandan/mentalhues.github.io/blob/master/CONTRIBUTING.md#submit-a-hue) to help build the website!
 
 ## More Information
 Descriptions of this file can be found in a blog post I wrote. You can locate the post [here](https://erindcole.com/2018/02/09/passion-project-update). I learned how to lay the foundation for this project as a Mozilla Open Leader. You can learn more about [Mozilla Open Leaders](https://mozilla.github.io/leadership-training/).
