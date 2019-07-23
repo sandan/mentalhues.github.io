@@ -11,6 +11,9 @@ Scroll down or jump to one of the following sections:
 * [Make a Change](#make-a-change)
 * [Get in Touch](#how-to-get-in-touch)
 
+
+Currently, we are collecting Hues and Stories that will be used to help build the site. When the site is fully enabled, these stories and hues will be collected anonymously. However, right now they will be collected in the [example-hues](https://github.com/mentalhues/mentalhues.github.io/example-hues). This means they will not be anonymous. We still welcome contributions to the stories and hues, with this in mind.
+
 ## Share Your Thoughts
 Now that you are reading this section, you are a contributer. Welcome to the project! This project needs contributors who can share insights, ask questions, and provide new ideas in the form of comments, adding issues, writing code, and more.
 
