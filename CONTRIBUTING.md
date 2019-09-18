@@ -27,7 +27,7 @@ Hues are topics related to mental health. Examples of Hues include test anxiety,
 1. Submit the story via Pull Request under the `example-hues` folder. 
 2. Email me directly at erincole567@gmail.com and I can submit it on your behalf. I treat all direct contacts via email as confidential.
 
-If you are not famililar with how to open a Pull Request, read the [Make a Change](#make-a-change) section. A pull request that includes a new Hue under the `example-hues/` directory should include the "'Hue" label. A core contributor will review the Pull Request.
+If you are not famililar with how to open a Pull Request, read the [Make a Change](#make-a-change) section. A pull request that includes a new Hue under the `example-hues/` directory should include the "Hue" label. A core contributor will review the Pull Request.
 
 When the site is built, Hues will be submitted anonymously. To submit a Hue anonymously for now:
 - via a Pull Request, attribute the story as "On behalf of Anonymous" or similar in the description or as a comment in the Pull Request.
