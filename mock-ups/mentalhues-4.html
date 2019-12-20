@@ -73,21 +73,47 @@
             top: 25px;
             left: -48px;
           }
-
-          .article-container-right{
-
-            float: left;
-            height: 700px;
-            margin-top: 600px;
-            margin-left: 160px;
-            width:1200px;
-          }
+          #header-art{
+             float: right;
+             position: relative;
+             left: -180px;
+           }
 
           .title{
             font-size: 40px;
           }
 
+          .article-container-right{
+
+            float: left;
+            height: 700px;
+            margin-left: 160px;
+            width:1200px;;
+            padding-top: 145px;
+          }
+
+          .article-container-left{
+
+            float: left;
+            height: 700px;
+            width:1200px;;
+            margin-left: 160px;
+            padding-top: 160px;
+          }
+
           .feature-container{
+
+            background-color: #004643;
+            float: left;
+            height: 500px;
+            margin-left: 300px;
+            opacity:84%;
+            position: relative;
+            padding: 20px 90px;
+            width: 280px;
+            z-index:1;
+          }
+          .feature-container-left{
 
             background-color: #004643;
             float: left;
@@ -107,6 +133,13 @@
             top: -570px;
           }
 
+          .featured-img-left{
+            float: left;
+            position: relative;
+            left: -125px;
+            top: -550px;
+          }
+
           .featured-img img{
              
             border-radius: 50%;
@@ -116,39 +149,11 @@
             z-index:0;
           }
 
-          .article-container-left{
-
-            float: left;
-            height: 700px;
-            margin-top: 600px;
-            width:100%;
-          }
-
-          .feature-container-left{
-
-            background-color: #004643;
-            float: left;
-            height: 500px;
-            margin-left: 500px;
-            opacity:84%;
-            position: relative;
-            padding: 20px 90px;
-            width: 280px;
-            z-index:1;
-          }
-
-          .featured-img-left{
-            float: right;
-            position: relative;
-            left: -800px;
-            top: -570px;
-          }
-
           .featured-img-left img{
              
-            height: 600px;
-            width: 600px;
             border-radius: 50%;
+            height: 550px;
+            width: 550px;
             position: relative;
             z-index:0;
           }
@@ -170,11 +175,15 @@
            <img id="hb-art" src="imgs/butterfly-flower.jpg">
        </a>
 
-       <img style="margin-top:50px;margin-left:100px;" src="imgs/butterflies.jpg">
-       <br>
-       <span style="display: inline-block;">
-         <img style="margin-left:200px;width:28%" src="imgs/girl-butterfly-silhouette.jpg">
-       <span>
+       <div id="header-art">
+           <span style="display: inline-block;">
+             <img style="width:84%;margin-top:50px;" src="imgs/butterflies.jpg">
+           </span>
+           <br>
+           <span style="display: inline-block;">
+             <img style="position:relative;top:-10px;left:-20px;margin-left:220px;width:25%" src="imgs/girl-butterfly-silhouette.jpg">
+           </span>
+       </div>
 
      </div>
  
@@ -197,14 +206,16 @@
      </div>
      <div class="article-container-left">
        <div class="feature-container-left">
-           <p class="title"> My Title </p>
+           <p class="title"> Cocoon of Solitude </p>
            <p>
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-           mollit anim id est laborum...
+           I was always the quiet kid in school. I was scared of fitting in. 
+           I would rather shut myself off from the world, at least then I
+           could spend time with myself and get to know who I am. Who am I? Who do I want to be?
+           Finding myself, even at a young age, was so important to me.
+
+           As I grew older, my friends moved away, my parents divorced, and I myself 
+           moved away from my cousins and other family members, I became isolated.
+
            </p>
        </div>
        <div class="featured-img-left">
@@ -213,14 +224,12 @@
      </div>
      <div class="article-container-right">
        <div class="feature-container">
-           <p class="title"> My Title </p>
+           <p class="title"> The Long Road Ahead </p>
            <p>
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-           mollit anim id est laborum...
+           I have a friend that I care about dearly. She suffers from many things in her environment
+           but one of them is school. I can feel the sense of dread and worry when the quarter starts
+           and she has to face her test anxiety again. But the road ahead doesn't have to be filled with dread, 
+           there are pit stops we can and should make along the way. 
            </p>
        </div>
        <div class="featured-img">
