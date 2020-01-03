@@ -4,17 +4,24 @@
   <head>
       <title> mentalhues </title>
         <link rel="stylesheet" type="text/css" href="mh.css">
+        <link href="https://fonts.googleapis.com/css?family=Nixie+One|Sacramento&display=swap" rel="stylesheet">
   </head>
   <body>
      <div id="header">
         <div id="logo-home">
          <img src="imgs/border-logo.jpg">
         </div>
-        <a href="">Login</a> <a href="">Author Spotlight</a><a href="">Search</a>
-        <a href="">Featured Stories</a>
+        <a href="">Sign in</a>
+        <a href="">Authors</a>
+        <a href="">Featured Hues</a>
+        <form>
+              Search:
+              <input type="text">
+        </form>
+
      </div>
 
-     <p id="home"><a href="">mentalhues</a></p>
+     <p id="home"><a href="">mental hues</a></p>
      <div id="header-banner">
        <a href="">Share your story.
            <img id="hb-art" src="imgs/butterfly-flower.jpg">
@@ -26,7 +33,7 @@
            </span>
            <br>
            <span style="display: inline-block;">
-             <img style="position:relative;top:-10px;left:-20px;margin-left:220px;width:21%" src="imgs/girl-butterfly-silhouette.jpg">
+             <img style="position:relative;top:-10px;left:150px;margin-left:220px;width:21%" src="imgs/girl-butterfly-silhouette.jpg">
            </span>
        </div>
 
@@ -34,53 +41,101 @@
  
     <div style="width:100%;height:200px;"></div>
 
-     <div class="article-container-right">
-       <div class="feature-container">
-           <p class="title"> Learning to Love Again </p>
-           <p>
-           Love can be a tsunami of emotions. When the tsunami calms back into the rhythmic ebb and flow,
-           I find myself looking at the calm sky as I drift in the ocean. Being pulled here and there,
-           I can feel the waves taking me on a journey. Where will I end up I wonder? I don't seem to care.
-           A flower makes its way into my outstretched hand as I drift.
+    <div id = "hues" class="center">
+        <div class="hue" style="border-color:#FFC300">
+          <img src="imgs/ireland-rainbow.jpg">
+          <a href="">Welcome to mentalhues</a>
+          <a href=""><p>Erin Cole</p></a>
+        </div>
 
-           </p>
-       </div>
-       <div class="featured-img">
-           <img src="imgs/Nature.jpg">
-       </div>
-     </div>
-     <div class="article-container-left">
-       <div class="feature-container-left">
-           <p class="title"> Cocoon of Solitude </p>
-           <p>
-           I was always the quiet kid in school. I was scared of fitting in. 
-           I would rather shut myself off from the world, at least then I
-           could spend time with myself and get to know who I am. Who am I? Who do I want to be?
-           Finding myself, even at a young age, was so important to me.
+        <div class="hue" style="border-color:#FF6200">
+          <img src="imgs/floating-candles.jpg">
+          <a href="">Learning to Love again</a>
+          <a href=""><p>Mark Sandan</p></a>
+        </div>
 
-           As I grew older, my friends moved away, my parents divorced, and I myself 
-           moved away from my cousins and other family members, I became isolated.
+        <div class="hue" style="border-color:#8059C1">
+          <img src="imgs/rainbow-stripe.jpg">
+          <a href="">Sensitive and Alone</a>
+          <a href=""><p>Khirstie Whitaker</p></a>
+        </div>
 
-           </p>
-       </div>
-       <div class="featured-img-left">
-           <img src="imgs/bright-forest.jpg">
-       </div>
-     </div>
-     <div class="article-container-right">
-       <div class="feature-container">
-           <p class="title"> The Long Road Ahead </p>
-           <p>
-           I have a friend that I care about dearly. She suffers from many things in her environment
-           but one of them is school. I can feel the sense of dread and worry when the quarter starts
-           and she has to face her test anxiety again. But the road ahead doesn't have to be filled with dread, 
-           there are pit stops we can and should make along the way. 
-           </p>
-       </div>
-       <div class="featured-img">
-           <img src="imgs/ireland-rainbow.jpg">
-       </div>
-     </div>
+        <div class="hue" style="border-color:#4D88ED">
+          <img src="imgs/beach-sunrise.jpg">
+          <a href="">Dealing with my anxiety</a>
+          <p>Anonymous</p>
+        </div>
+
+        <div class="hue" style="border-color:#005484">
+          <img src="imgs/floating-candles.jpg">
+          <a href="">Survival Mentality</a>
+          <a href=""><p>Mark Sandan</p></a>
+        </div>
+
+        <div class="hue" style="border-color:#BF5D00">
+          <img src="imgs/floating-candles.jpg">
+          <a href="">A Day at the Beach</a>
+          <a href=""><p>Mark Sandan</p></a>
+        </div>
+
+        <div class="hue" style="border-color:#D8D7C5">
+          <img src="imgs/simple-snow.jpg">
+          <a href="">Follow your heart</a>
+          <p>Anonymous</p>
+        </div>
+
+        <div class="hue" style="border-color:#D5E0D0">
+          <img src="imgs/clarity.jpg">
+          <a href=""> The disconnection lens</a>
+          <p>Anonymous</p>
+        </div>
+
+
+        <div class="hue" style="border-color:#E8CEB8">
+          <img src="imgs/ocean-dusk.jpg">
+          <a href="">The opposite of courage is conforming</a>
+          <p>Anonymous</p>
+        </div>
+
+        <div class="hue" style="border-color:#4D7AA9">
+          <img src="imgs/color-splash-red-blue.jpg">
+          <a href="">When paranoia hits you at the grocery store</a>
+          <p>Anonymous</p>
+        </div>
+
+        <div class="hue" style="border-color:#8B638F">
+          <img src="imgs/butterflies.jpg">
+          <a href="">A Pursuit of Happiness</a>
+          <p>Anonymous</p>
+        </div>
+
+        <div class="hue" style="border-color:#DDE5D0">
+          <img src="imgs/celestial-reflection.jpg">
+          <a href="">What it's like in a mental institute</a>
+          <p>Anonymous</p>
+        </div>
+    </div>
+
+      <div id="loader">
+        <a href=""><p class="loader-text"> Show more stories </p></a>
+      </div>
+
+      <div id="footer">
+        <form class="newsletter">
+          <p>
+              Subscribe to our newsletter:
+              <input type="text" placeholder="Please enter your email address.">
+              <input type="submit" value="Submit">
+          </p>
+        </form>
+        <p class="footer-content" style="left:0px">
+           &copy; 2019-2020 Mental Hues. All Rights Reserved.
+        </p>
+        <p class="footer-content"><a href=""> Contact Us </a></p>
+        <p class="footer-content"><a href=""> Terms & Conditions </a></p>
+        <p class="footer-content"><a href=""> Private Policy </a></p>
+        </p>
+      </div>
 
   </body>
 
