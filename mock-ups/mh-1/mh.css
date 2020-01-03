@@ -1,14 +1,7 @@
-<!doctype html>
-
-<html>
-  <head>
-      <title> mentalhues </title>
-      <style>
           body {
             margin: 0;
             padding: 0;
             font-family: cursive;
-            font-size: 16px;
             color: white;
           }
 
@@ -75,10 +68,9 @@
             left: -48px;
           }
           #header-art{
-             background-color:blue;
-             width:1200px;
-             height: 900px;
              float: right;
+             position: relative;
+             left: -150px;
            }
 
           .title{
@@ -159,86 +151,3 @@
             position: relative;
             z-index:0;
           }
-
-      </style>
-  </head>
-  <body>
-     <div id="header">
-        <div id="logo-home">
-         <img src="imgs/border-logo.jpg">
-        </div>
-        <a href="">Login</a> <a href="">Author Spotlight</a><a href="">Search</a>
-        <a href="">Featured Stories</a>
-     </div>
-
-     <p id="home"><a href="">mentalhues</a></p>
-     <div id="header-banner">
-       <a href="">Share your story.
-           <img id="hb-art" src="imgs/butterfly-flower.jpg">
-       </a>
-
-       <div id="header-art">
-           <span style="display: inline-block;">
-             <img style="width:84%;margin-top:50px;" src="imgs/butterflies.jpg">
-           </span>
-           <br>
-           <span style="display: inline-block;">
-             <img style="position:relative;top:-10px;left:-100px;margin-left:270px;width:25%" src="imgs/girl-butterfly-silhouette.jpg">
-           </span>
-       </div>
-
-     </div>
- 
-    <div style="width:100%;height:200px;"></div>
-
-     <div class="article-container-right">
-       <div class="feature-container">
-           <p class="title"> Learning to Love Again </p>
-           <p>
-           Love can be a tsunami of emotions. When the tsunami calms back into the rhythmic ebb and flow,
-           I find myself looking at the calm sky as I drift in the ocean. Being pulled here and there,
-           I can feel the waves taking me on a journey. Where will I end up I wonder? I don't seem to care.
-           A flower makes its way into my outstretched hand as I drift.
-
-           </p>
-       </div>
-       <div class="featured-img">
-           <img src="imgs/Nature.jpg">
-       </div>
-     </div>
-     <div class="article-container-left">
-       <div class="feature-container-left">
-           <p class="title"> Cocoon of Solitude </p>
-           <p>
-           I was always the quiet kid in school. I was scared of fitting in. 
-           I would rather shut myself off from the world, at least then I
-           could spend time with myself and get to know who I am. Who am I? Who do I want to be?
-           Finding myself, even at a young age, was so important to me.
-
-           As I grew older, my friends moved away, my parents divorced, and I myself 
-           moved away from my cousins and other family members, I became isolated.
-
-           </p>
-       </div>
-       <div class="featured-img-left">
-           <img src="imgs/bright-forest.jpg">
-       </div>
-     </div>
-     <div class="article-container-right">
-       <div class="feature-container">
-           <p class="title"> The Long Road Ahead </p>
-           <p>
-           I have a friend that I care about dearly. She suffers from many things in her environment
-           but one of them is school. I can feel the sense of dread and worry when the quarter starts
-           and she has to face her test anxiety again. But the road ahead doesn't have to be filled with dread, 
-           there are pit stops we can and should make along the way. 
-           </p>
-       </div>
-       <div class="featured-img">
-           <img src="imgs/ireland-rainbow.jpg">
-       </div>
-     </div>
-
-  </body>
-
-</html>
