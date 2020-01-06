@@ -5,13 +5,13 @@
   border: 0px;
 }
 #banner-art{
-  height: 400px;
-  width: 400px;
-  border-radius:50%;
+  height:400px;
+  width:303px;
   display: block;
+  position:relative;
+  z-index: 0;
 }
 #banner-title{
-  font-family: 'Sacramento', cursive;
   font-size: 55px;
   color:white;
 }
@@ -45,5 +45,14 @@ body {
       margin: 0;
       padding: 0;
       color: black;
-      font-family: 'Nixie One', serif;
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.card{
+      border-style: solid;
+      border-radius: 0px;
+}
+.card-body{
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight:300;
 }
