@@ -71,3 +71,8 @@ body {
     display: none;
   }
 }
+@media (max-width: 1059px){
+  .figure {
+    display: none;
+  }
+}
