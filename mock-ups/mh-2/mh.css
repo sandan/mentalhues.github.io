@@ -3,31 +3,31 @@
 }
 #banner{
   border: 0px;
+  margin-left: 160px;
 }
 #banner-art{
   height:400px;
   width:303px;
   display: block;
-  position:relative;
-  z-index: 0;
 }
-#banner-title{
-  font-size: 55px;
-  color:white;
+.carousel-caption{
+  color: black;
 }
-#featured-art{
-  height: 200px;
-  width: 200px;
-  border-radius:50%;
-  display: block;
+.carousel-item{
+  height: 300px;
+}
+
+.featured-art{
+ height: 300px;
+ width: 300px;
+ border-radius: 50%;
 }
 #hue{
   border-width: 0px 0px 0px 1px;
-
 }
 #hue-icon{
-  height: 60px;
-  width: 60px;
+  height: 70px;
+  width: 70px;
   border-radius:50%;
 }
 a {
@@ -40,14 +40,12 @@ a:hover {
 a:visited {
     color: black;
 }
-
 body {
       margin: 0;
       padding: 0;
       color: black;
       font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
 .card{
       border-style: solid;
       border-radius: 0px;
@@ -55,4 +53,21 @@ body {
 .card-body{
       font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight:300;
+}
+
+@media (max-width: 920px){
+  .featured-art {
+    height: 150px;
+    width:150px;
+  }
+}
+@media (max-width: 560px){
+  .featured-art {
+    display: none;
+  }
+}
+@media (max-width: 860px){
+  #hue-icon {
+    display: none;
+  }
 }

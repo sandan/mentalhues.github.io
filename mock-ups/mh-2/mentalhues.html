@@ -6,6 +6,8 @@
 
     <link rel="stylesheet" href="bootstrap-4.4.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="mh.css">
+    <link href="carousel.css" rel="stylesheet">
+
     <title> mentalhues </title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap" rel="stylesheet">
   </head>
@@ -55,6 +57,7 @@
                Content
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Gallery</a>
               <a class="dropdown-item" href="#">Podcast</a>
               <a class="dropdown-item" href="#">Published Volumes</a>
               <a class="dropdown-item" href="#">Web Series</a>
@@ -99,93 +102,54 @@
       </div>
     </div>
 
-    <div class="card mb-5" style="max-width:100%;">
-      <div id="carouselExampleCaptions" 
-           class="carousel slide" 
-           data-ride="carousel" data-interval="0">
-
+      <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
         <ol class="carousel-indicators">
-          <li data-target="#carouselExampleCaptions" 
-              data-slide-to="0" class="active" 
-              style="background-color:#51C6B1;">
-          </li>
-          <li data-target="#carouselExampleCaptions" 
-              data-slide-to="1" style="background-color:#51C6B1;"> 
-          </li>
-          <li data-target="#carouselExampleCaptions" 
-              data-slide-to="2" style="background-color:#51C6B1;">
-          </li>
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
-
         <div class="carousel-inner">
 
-          <div class="carousel-item active" style="margin-top: 70px;">
-            <div class="row no-gutters">
-
-              <div class="media">
-                <div class=" offset-sm-1 align-items-center d-flex justify-content-center">
-                <img src="imgs/plants-growing.jpg" class="align-self-center featured-art">
-                </div>
-                <div class="media-body col-md-7">
-                  <h5 class="mt-0 text-center"><a href="">One step at a time</a></h5>
-                  <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                  <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                </div>
+          <div class="carousel-item active">
+            <img class="first-slide mx-auto d-block featured-art" src="imgs/plants-growing.jpg">
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>One step at a time</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
               </div>
-
             </div>
           </div>
-
-          <div class="carousel-item" style="margin-top: 70px;">
-            <div class="row no-gutters">
-
-              <div class="media">
-                <div class=" offset-sm-1 align-items-center d-flex justify-content-center">
-                <img src="imgs/Nature.jpg" class="align-self-center featured-art">
-                </div>
-                <div class="media-body col-md-7">
-                  <h5 class="mt-0 text-center"><a href="">Reconnecting with Nature</a></h5>
-                  <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                  <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                </div>
+          <div class="carousel-item">
+            <img class="second-slide mx-auto d-block featured-art" src="imgs/Nature.jpg">
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>Reconnecting with Nature</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
               </div>
-
             </div>
           </div>
-
-          <div class="carousel-item" style="margin-top: 70px;">
-            <div class="row no-gutters">
-
-              <div class="media">
-                <div class=" offset-sm-1 align-items-center d-flex justify-content-center">
-                <img src="imgs/space-mountain.jpg" class="align-self-center featured-art">
-                </div>
-                <div class="media-body col-md-7">
-                  <h5 class="mt-0 text-center"><a href="">The vast expanse of space</a></h5>
-                  <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                  <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                </div>
+          <div class="carousel-item">
+            <img class="third-slide mx-auto d-block featured-art" src="imgs/space-mountain.jpg">
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>Exploring what is beyond</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
               </div>
-
+            </div>
           </div>
         </div>
-
-        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true" style="filter:invert(100%);"></span>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true" style="filter:invert(100%);"></span>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
       </div>
 
-    </div>
-    </div>
-
-
   <div class="row no-gutters">
-    <div class="col-md-6" style="max-width:450px;margin-left:230px;">
+    <div class="col-md-6" style="max-width:450px;margin-left:80px;">
 
       <div class="card mb-3" 
            id="hue" style="border-color:#FFC300">
@@ -203,9 +167,12 @@
                 </a>
                 </h5>
                 <p>
-                <a href="">
-                  Erin Cole
-                </a>
+                  Donec id elit non mi porta gravida at eget metus. 
+                  Nullam id dolor id nibh ultricies vehicula ut id elit.
+                  <br>
+                  <a href="">
+                    by Erin Cole
+                  </a>
                 </p>
             </div>
           </div>
@@ -228,8 +195,11 @@
                 </a>
                 </h5>
               <p>
+                  Donec id elit non mi porta gravida at eget metus. 
+                  Nullam id dolor id nibh ultricies vehicula ut id elit.
+                  <br>
               <a href="">
-                Mark Sandan
+                by Mark Sandan
               </a>
               </p>
             </div>
@@ -253,8 +223,11 @@
                 </a>
                 </h5>
               <p>
+                  Donec id elit non mi porta gravida at eget metus. 
+                  Nullam id dolor id nibh ultricies vehicula ut id elit.
+                  <br>
               <a href="">
-                  Khirstie Whitaker
+                  by Khirstie Whitaker
               </a>
               </p>
             </div>
@@ -278,7 +251,11 @@
                 </a>
                 </h5>
               <p>
-                  Anonymous
+
+                  Donec id elit non mi porta gravida at eget metus. 
+                  Nullam id dolor id nibh ultricies vehicula ut id elit.
+                  <br>
+                  by Anonymous
               </p>
             </div>
           </div>
@@ -300,11 +277,14 @@
                   Survival Mentality
                 </a>
                 </h5>
-              <a href="">
               <p>
-                  Mark Sandan
-              </p>
+                  Donec id elit non mi porta gravida at eget metus. 
+                  Nullam id dolor id nibh ultricies vehicula ut id elit.
+                  <br>
+              <a href="">
+                  by Mark Sandan
               </a>
+              </p>
             </div>
           </div>
         </div>
@@ -326,7 +306,10 @@
                 </a>
                 </h5>
               <p>
-                  Anonymous
+                  Donec id elit non mi porta gravida at eget metus. 
+                  Nullam id dolor id nibh ultricies vehicula ut id elit.
+                  <br>
+                  by Anonymous
               </p>
             </div>
           </div>
@@ -349,17 +332,16 @@
                 </a>
                 </h5>
               <p>
-                  Anonymous
+                  Donec id elit non mi porta gravida at eget metus. 
+                  Nullam id dolor id nibh ultricies vehicula ut id elit.
+                  <br>
+                  by Anonymous
               </p>
             </div>
           </div>
         </div>
       </div>
 
-    </div>
-    <div class="col-md-6 art">
-      <img src="imgs/butterflies.png" 
-           style="height:900px;width:738px;">
     </div>
 
   </div>
@@ -374,8 +356,7 @@
 
       <div class="card-footer bg-white">
      
-        <div class="row">
-        <div class="container-fluid mx-auto">
+        <div class="row justify-content-center">
         <form class="form-inline">
           <div class="form-group mx-sm-3">
             <label for="exampleFormControlInput1" 
@@ -389,7 +370,6 @@
           </div>
 
         </form>
-        </div>
         </div>
 
         <footer class="pt-4 my-md-5 pt-md-5 border-top">
