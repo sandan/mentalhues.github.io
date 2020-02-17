@@ -38,10 +38,9 @@ var data = Hues{
 func index(writer http.ResponseWriter, request *http.Request){
 
   files := []string{
-    "templates/mentalhues.html",
+    "templates/layout.html",
     "templates/navbar.html",
-    "templates/carousel.html",
-    "templates/body.html",
+    "templates/hues_art.html",
     "templates/footer.html",
   }
   templates := template.Must(template.ParseFiles(files...))

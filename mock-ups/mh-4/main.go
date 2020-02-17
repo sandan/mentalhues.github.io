@@ -13,9 +13,11 @@ func main(){
   mux.Handle("/static/", http.StripPrefix("/static/", files))
 
   mux.HandleFunc("/", index)
+  mux.HandleFunc("/signin", signin)
+  mux.HandleFunc("/about", about)
+  //mux.HandleFunc("/signup", signup)
 
   //http.HandleFunc("/err", err)
-  //http.HandleFunc("/signup", signup)
   //http.HandleFunc("/login", login)
   //http.HandleFunc("/logout", logout)
   //http.HandleFunc("/authenticate", logout)
