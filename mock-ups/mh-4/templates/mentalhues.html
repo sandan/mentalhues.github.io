@@ -1,0 +1,58 @@
+{{ define "index" }}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/static/dist/bootstrap-4.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/mh.css">
+    <link href="/static/carousel.css" rel="stylesheet">
+
+    <title> mentalhues </title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <script src="/static/dist/jquery-3.4.1.min.js"></script>
+    <script src="/static/dist/bootstrap-4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    {{ template "navbar" }}
+
+    <div class="container my-5">
+      <div class="card bg-white" id="banner">
+          <img src="/static/imgs/heads.png"
+               id="banner-art" 
+               class="card-img mx-auto">
+      </div>
+    </div>
+
+  {{ template "carousel" . }}
+
+  <div class="row no-gutters">
+  </div>
+
+  <div class="row no-gutters">
+    <div class="col-md-6" style="max-width:450px;margin-left:80px;">
+    {{ template "content" . }}
+    </div>
+    <div class="col-md-6">
+      <figure class="figure">
+        <img src="/static/imgs/butterflies.png" class="figure-img img-fluid rounded">
+        <figcaption class="figure-caption text-right">A caption for the above image.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+    <div class="card text-center" style="border:0;">
+      <div class="card-body">
+        <button type="button" class="btn btn-outline-success">
+          Show more hues
+        </button>
+      </div>
+      {{ template "footer" }}
+    </div>
+
+  </body>
+</html>
+{{ end }}
