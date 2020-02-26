@@ -14,12 +14,19 @@ func main(){
 
   mux.HandleFunc("/", index)
   mux.HandleFunc("/signin", signin)
+  mux.HandleFunc("/signup", signup)
   mux.HandleFunc("/about", about)
-  //mux.HandleFunc("/signup", signup)
-
+  mux.HandleFunc("/donate", donate)
+  mux.HandleFunc("/code_of_conduct", code_of_conduct)
+  mux.HandleFunc("/guidelines", guidelines)
+  mux.HandleFunc("/hue/", hues) // handle subpath
+  //mux.HandleFunc("/contributors", contrib)
+  //mux.HandleFunc("/podcast", gallery)
+  //mux.HandleFunc("/publishing", volumes)
+  //mux.HandleFunc("/web-series", web_series)
   //http.HandleFunc("/err", err)
-  //http.HandleFunc("/login", login)
   //http.HandleFunc("/logout", logout)
+
   //http.HandleFunc("/authenticate", logout)
 
   // starting up the server

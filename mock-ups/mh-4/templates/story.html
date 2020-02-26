@@ -1,0 +1,17 @@
+{{ define "content" }}
+
+<div class="container">
+  <div id="story-header" class="pt-5">
+      <h1 class="card-title">{{ .Title }}</h1>
+  </div>
+  <div class="card border-0 pt-5">
+    <img class="card-img-top" height="720" width="1280" src="/static/{{- .Image -}}"></img>
+    <div class="card-body">
+      <h3 class="card-subtitle mb-2 text-muted">Card subtitle</h3>
+      by <a href="#" class="card-link">{{- .Author -}}</a>
+      <p class="card-text pt-5"> {{ .Body }}</p>
+    </div>
+  </div>
+</div>
+
+{{ end }}

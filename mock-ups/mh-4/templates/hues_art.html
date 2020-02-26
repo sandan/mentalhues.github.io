@@ -1,4 +1,11 @@
 {{ define "content" }}
+    <div class="container my-5">
+      <div class="card bg-white" id="banner">
+          <img src="/static/imgs/heads.png"
+               id="banner-art" 
+               class="card-img mx-auto">
+      </div>
+    </div>
   <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -16,7 +23,7 @@
           <img class="first-slide mx-auto d-block featured-art" src="/static/{{- $s.Image -}}">
           <div class="container">
             <div class="carousel-caption text-left">
-              <h1> {{ $s.Title }}</h1>
+              <a href="{{- $s.URL -}}"><h1> {{ $s.Title }}</h1></a>
               <p> {{ $s.Description }} </p>
             </div>
           </div>
@@ -39,18 +46,18 @@
 
   <div class="row no-gutters">
     <div class="col-md-6" style="max-width:450px;margin-left:80px;">
-      {{ range .Hue }}
-      <div class="card mb-3" id="hue" style="border-color:#FF6200">
+      {{ range $index, $s := .Hue }}
+      <div class="card mb-3" id="hue" style="border-color:{{- $index | rhue -}}">
         <div class="row no-gutters">
           <div class="col-md-2 align-items-center d-flex justify-content-center">
-            <img src="/static/{{ .Image }}" class="card-img" id="hue-icon">
+            <img src="/static/{{ $s.Image }}" class="card-img" id="hue-icon">
           </div>
           <div class="col-md-10">
             <div class="card-body">
-                <h5 class="card-title"><a href="">{{ .Title }}</a></h5>
-              <p> {{ .Description }} 
+                <h5 class="card-title"><a href="/hue/{{- $s.URL -}}">{{ $s.Title }}</a></h5>
+              <p> {{ $s.Description }} 
               <br>
-              by <a href=""> {{ .Author }} </a>
+              by <a href=""> {{ $s.Author }} </a>
               </p>
             </div>
           </div>
@@ -58,12 +65,24 @@
       </div>
       {{ end }}
     </div>
+
     <div class="col-md-6">
       <figure class="figure">
         <img src="/static/imgs/butterflies.png" class="figure-img img-fluid rounded">
         <figcaption class="figure-caption text-right">A caption for the above image.</figcaption>
       </figure>
+      <figure class="figure">
+        <img src="/static/imgs/rainbow-stripe.jpg" class="figure-img img-fluid rounded">
+        <figcaption class="figure-caption text-right">A caption for the above image.</figcaption>
+      </figure>
+      <figure class="figure">
+        <img src="/static/imgs/abstract-color-wave-kathy-kurtz.jpg" class="figure-img img-fluid rounded">
+        <figcaption class="figure-caption text-right">A caption for the above image.</figcaption>
+      </figure>
     </div>
+
+
+
   </div>
 
     <div class="card text-center" style="border:0;">
