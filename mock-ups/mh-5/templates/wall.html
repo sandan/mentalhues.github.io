@@ -1,0 +1,202 @@
+{{ define "content" }}
+<!-- Include stylesheet -->
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+    <ul class="list-group media-list media-list-stream mb-4">
+
+<!-- Create the editor container
+        <li class="media list-group-item p-4">
+          <div class="input-group">
+-->
+<div id="editor">
+</div>
+<!--
+            <input type="text" class="form-control" placeholder="Message">
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-secondary">
+                <span class="icon icon-camera"></span>
+              </button>
+            </div>
+          </div>
+        </li>
+-->
+
+        <li class="media list-group-item p-4">
+                <img class="media-object d-flex align-self-start mr-3" src="/static/imgs/aqua-universe.jpg">
+          <div class="media-body">
+            <div class="media-heading">
+              <small class="float-right text-muted">4 min</small>
+              <h6>Mark Sandan</h6>
+            </div>
+
+            <p>
+              Today was a hard day. It started like any other. Thoughts began creeping in my mind. Uncontrollably questioning and thinking. I needed to get out of my head. I've probably been inside too long. So I took a walk to the sea wall to see some familiar faces.
+            </p>
+
+            <div class="media-body-inline-grid" data-grid="images"><div style="display: inline-block; margin-bottom: 10px; margin-right: 10px; vertical-align: bottom;">
+                <img data-action="zoom" data-width="1050" data-height="700" src="/static/imgs/glitter.jpeg" style="width: 337px; height: 225px;">
+              </div><div style="display: inline-block; margin-bottom: 10px; margin-right: 10px; vertical-align: bottom;">
+                <img data-action="zoom" data-width="640" data-height="640" src="/static/imgs/red-balloons.jpg" style="width: 224px; height: 225px;">
+              </div><div style="display: inline-block; margin-bottom: 10px; margin-right: 0px; vertical-align: bottom;">
+                <img data-action="zoom" data-width="640" data-height="640" src="/static/imgs/butterfly.jpg" style="width: 226px; height: 225px;">
+              </div><div style="display: inline-block; margin-bottom: 10px; margin-right: 0px; vertical-align: bottom;">
+                <img data-action="zoom" data-width="1048" data-height="700" src="/static/imgs/mist.jpg" style="width: 809px; height: 528px;">
+              </div></div>
+
+            <ul class="media-list mb-2">
+              <li class="media mb-3">
+                <img class="media-object d-flex align-self-start mr-3" src="/static/imgs/Nature.jpg">
+                <div class="media-body">
+                  <strong>Baby Sunflower: </strong>
+                  Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis.
+                </div>
+              </li>
+              <li class="media">
+                <img class="media-object d-flex align-self-start mr-3" src="/static/imgs/yellow-rose.jpg">
+                <div class="media-body">
+                  <strong>Rose: </strong>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="media list-group-item p-4">
+          <img class="media-object d-flex align-self-start mr-3" src="/static/imgs/butterfly.jpg">
+          <div class="media-body">
+            <div class="media-body-text">
+              <div class="media-heading">
+                <small class="float-right text-muted">12 min</small>
+                <h6>Anonymous</h6>
+              </div>
+              <p>
+                Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li class="media list-group-item p-4">
+          <img class="media-object d-flex align-self-start mr-3" src="/static/imgs/butterfly.jpg">
+          <div class="media-body">
+            <div class="media-heading">
+              <small class="float-right text-muted">34 min</small>
+              <h6>Anonymous</h6>
+            </div>
+            <p>
+              Some days I feel buried in obligation. One obligation crushes me. But not today...
+            </p>
+
+            <div class="media-body-inline-grid" data-grid="images"><img style="display: inline-block; width: 783px; height: 783px; margin-bottom: 10px; margin-right: 0px; vertical-align: bottom;" data-width="640" data-height="640" data-action="zoom" src="/static/imgs/buried.jpg"></div>
+
+            <ul class="media-list">
+              <li class="media">
+                <img class="media-object d-flex align-self-start mr-3" src="/static/imgs/glitter.jpeg">
+                <div class="media-body">
+                  <strong>Jane Doe: </strong>
+                  Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="media list-group-item p-4">
+          <img class="media-object d-flex align-self-start mr-3" src="/static/imgs/butterfly.jpg">
+          <div class="media-body">
+            <div class="media-body-text">
+              <div class="media-heading">
+                <small class="float-right text-muted">42 min</small>
+                <h6>Anonymous</h6>
+              </div>
+              <p>
+                Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li class="media list-group-item p-4">
+          <img class="media-object d-flex align-self-start mr-3" src="/static/imgs/butterfly.jpg">
+          <div class="media-body">
+            <div class="media-body-text">
+              <div class="media-heading">
+                <small class="float-right text-muted">52 min</small>
+                <h6>Anonymous</h6>
+              </div>
+              <p>
+                Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+        </li>
+    </ul>
+
+<!-- Include the Quill library -->
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<!-- Initialize Quill editor -->
+<script>
+            var toolbarOptions = [
+                ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+                ['blockquote', 'code-block'],
+
+                [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                //[{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+                [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+               // [{ 'direction': 'rtl' }],                         // text direction
+
+                [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+                //[ 'link', 'image', 'video' ],
+                [ 'link', 'image'],          // add's image support
+                [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+                //[{ 'font': [] }],
+                [{ 'align': [] }],
+
+                ['clean']                                         // remove formatting button
+            ];
+  var Delta = Quill.import('delta');
+  var quill = new Quill('#editor', {
+    modules: {
+      toolbar: toolbarOptions
+    },
+    placeholder: 'share your story...',
+    theme: 'snow'
+  });
+
+  // Store accumulated changes
+  var change = new Delta();
+  quill.on('text-change', function(delta) {
+    change = change.compose(delta);
+  });
+
+  // Save periodically
+  setInterval(function() {
+    if (change.length() > 0) {
+      console.log('Saving changes', change);
+      /*
+      Send partial changes
+      $.post('/your-endpoint', {
+        partial: JSON.stringify(change)
+      });
+
+      Send entire document
+      $.post('/your-endpoint', {
+        doc: JSON.stringify(quill.getContents())
+      });
+      */
+      change = new Delta();
+    }
+  }, 5*1000);
+
+  // Check for unsaved data
+  window.onbeforeunload = function() {
+    if (change.length() > 0) {
+      return 'There are unsaved changes. Are you sure you want to leave?';
+    }
+  }
+  </script>
+
+
+{{ end }}
+

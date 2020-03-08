@@ -1,0 +1,30 @@
+{{ define "banner" }}
+
+<link href="https://fonts.googleapis.com/css?family=Sacramento&display=swap" rel="stylesheet">
+
+<div class="container pt-4">
+<div class="profile-header" style="background-image:url({{ .Display }})">
+  <div class="container">
+    <div class="container-inner">
+      <!--<img class="rounded-circle media-object" src="/static/imgs/butterfly.jpg"> -->
+      <p class="profile-header-user" style="font-family:Sacramento;font-size:30px">
+        {{ .Body }}
+      </p>
+    </div>
+  </div>
+
+  <nav class="profile-header-nav">
+    <ul class="nav nav-tabs justify-content-center">
+    {{ range .Content }}
+      {{  if . | eq $.Active }}
+      <li class="nav-item active">
+      {{ else }}
+      <li class="nav-item">
+      {{ end }}
+        <a class="nav-link" href="{{ . | lower }}">{{ . }}</a>
+      </li>
+    {{ end }}
+    </ul>
+  </nav>
+</div>
+{{ end }}
