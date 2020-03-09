@@ -38,20 +38,23 @@ func main(){
   mux.HandleFunc("/community", index)
   mux.HandleFunc("/gallery", gallery)
   mux.HandleFunc("/hues", hues)
-  //mux.HandleFunc("/signin", signin)
-  //mux.HandleFunc("/signup", signup)
-  //mux.HandleFunc("/about", about)
-  //mux.HandleFunc("/donate", donate)
-  //mux.HandleFunc("/code_of_conduct", code_of_conduct)
-  //mux.HandleFunc("/guidelines", guidelines)
+
+  mux.HandleFunc("/about", about)
+  mux.HandleFunc("/guidelines", guidelines)
+  mux.HandleFunc("/conduct", conduct)
+
+  mux.HandleFunc("/signin", signin)
+  mux.HandleFunc("/signup", signup)
+  mux.HandleFunc("/donate", donate)
+
   //mux.HandleFunc("/share", share)
   //mux.HandleFunc("/contributors", contrib)
-  //mux.HandleFunc("/podcast", gallery)
+  //mux.HandleFunc("/podcast", podcast)
   //mux.HandleFunc("/publishing", volumes)
-  //mux.HandleFunc("/web-series", web_series)
+  //mux.HandleFunc("/web-series", web-series)
   //http.HandleFunc("/err", err)
   //http.HandleFunc("/logout", logout)
-  //http.HandleFunc("/authenticate", logout)
+  //http.HandleFunc("/authenticate", auth)
 
   // starting up the server
   server := &http.Server{

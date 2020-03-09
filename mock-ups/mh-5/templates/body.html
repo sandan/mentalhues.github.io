@@ -1,0 +1,12 @@
+{{ define "body" }}
+    <div class="container pt-4">
+      {{ template "banner" .Banner }}
+
+      <div class="row">
+        <div class="col-lg-3">{{ template "featured-members" }}</div>
+        <div class="col-lg-6">{{ template "content" . }}</div>
+        <div class="col-lg-3">{{ template "ad" }}</div>
+      </div>
+    </div>
+
+{{ end }}

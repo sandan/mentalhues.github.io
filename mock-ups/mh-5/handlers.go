@@ -64,6 +64,7 @@ func index(writer http.ResponseWriter, request *http.Request){
   files := []string{
     "templates/index.html",
     "templates/navbar1.html",
+    "templates/body.html",
     "templates/banner.html",
     "templates/users-featured.html",
     "templates/wall.html",
@@ -86,6 +87,7 @@ func gallery(writer http.ResponseWriter, request *http.Request){
   files := []string{
     "templates/index.html",
     "templates/navbar1.html",
+    "templates/body.html",
     "templates/banner.html",
     "templates/users-featured.html",
     "templates/gallery.html",
@@ -108,6 +110,7 @@ func hues(writer http.ResponseWriter, request *http.Request){
   files := []string{
     "templates/index.html",
     "templates/navbar1.html",
+    "templates/body.html",
     "templates/banner.html",
     "templates/users-featured.html",
     "templates/hues-featured.html",
@@ -126,16 +129,56 @@ func hues(writer http.ResponseWriter, request *http.Request){
   templates.Execute(writer, info)
 }
 
-func signin(writer http.ResponseWriter, request *http.Request){}
-func signup(writer http.ResponseWriter, request *http.Request){}
+func signin(writer http.ResponseWriter, request *http.Request){
+  templates := template.Must(template.ParseFiles("templates/signin.html"))
+  templates.ExecuteTemplate(writer, "signin", nil)
+}
+func signup(writer http.ResponseWriter, request *http.Request){
+  templates := template.Must(template.ParseFiles("templates/signup.html"))
+  templates.ExecuteTemplate(writer, "signup", nil)
+}
 func signout(writer http.ResponseWriter, request *http.Request){}
-func donate(writer http.ResponseWriter, request *http.Request){}
+func donate(writer http.ResponseWriter, request *http.Request){
+  templates := template.Must(template.ParseFiles("templates/donate.html"))
+  templates.ExecuteTemplate(writer, "donate", nil)
+}
 func share(writer http.ResponseWriter, request *http.Request){}
-func wall(writer http.ResponseWriter, request *http.Request){}
 func authenticate(writer http.ResponseWriter, request *http.Request){}
 
 // static
-func about(writer http.ResponseWriter, request *http.Request){}
-func guidelines(writer http.ResponseWriter, request *http.Request){}
-func conduct(writer http.ResponseWriter, request *http.Request){}
-func err404(writer http.ResponseWriter, request *http.Request){}
+func about(writer http.ResponseWriter, request *http.Request){
+
+  files := []string{
+    "templates/index.html",
+    "templates/navbar1.html",
+    "templates/about.html",
+    "templates/footer.html",
+  }
+  templates := template.Must(template.ParseFiles(files...))
+  templates.ExecuteTemplate(writer, "layout", nil)
+}
+func guidelines(writer http.ResponseWriter, request *http.Request){
+
+  files := []string{
+    "templates/index.html",
+    "templates/navbar1.html",
+    "templates/guidelines.html",
+    "templates/footer.html",
+  }
+  templates := template.Must(template.ParseFiles(files...))
+  templates.ExecuteTemplate(writer, "layout", nil)
+}
+func conduct(writer http.ResponseWriter, request *http.Request){
+
+  files := []string{
+    "templates/index.html",
+    "templates/navbar1.html",
+    "templates/conduct.html",
+    "templates/footer.html",
+  }
+  templates := template.Must(template.ParseFiles(files...))
+  templates.ExecuteTemplate(writer, "layout", nil)
+}
+func err404(writer http.ResponseWriter, request *http.Request){
+
+}
