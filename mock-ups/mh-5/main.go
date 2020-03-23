@@ -2,9 +2,12 @@ package main
 
 import(
   "net/http"
+  "log"
   "time"
   "os"
   "fmt"
+  "database/sql"
+  _ "github.com/lib/pq"
   "encoding/json"
 )
 
@@ -15,6 +18,7 @@ type Configuration struct {
     Static       string
 }
 var config Configuration
+var Db *sql.DB
 
 func init(){
     file, err := os.Open("config.json")
@@ -27,6 +31,12 @@ func init(){
     if err != nil {
         fmt.Println("Cannot get configuration from file", err)
     }
+
+    Db, err = sql.Open("postgres", "dbname=chatchat sslmode=disable")
+    if err != nil {
+        log.Fatal(err)
+    }
+    return
 }
 
 func main(){
@@ -42,19 +52,21 @@ func main(){
   mux.HandleFunc("/about", about)
   mux.HandleFunc("/guidelines", guidelines)
   mux.HandleFunc("/conduct", conduct)
+  mux.HandleFunc("/donate", donate)
 
   mux.HandleFunc("/signin", signin)
+  mux.HandleFunc("/authn", auth)
   mux.HandleFunc("/signup", signup)
-  mux.HandleFunc("/donate", donate)
+  mux.HandleFunc("/signup_account", account)
+  mux.HandleFunc("/signout", signout)
 
   //mux.HandleFunc("/share", share)
   //mux.HandleFunc("/contributors", contrib)
   //mux.HandleFunc("/podcast", podcast)
   //mux.HandleFunc("/publishing", volumes)
   //mux.HandleFunc("/web-series", web-series)
-  //http.HandleFunc("/err", err)
-  //http.HandleFunc("/logout", logout)
-  //http.HandleFunc("/authenticate", auth)
+  //mux.HandleFunc("/err", err)
+
 
   // starting up the server
   server := &http.Server{

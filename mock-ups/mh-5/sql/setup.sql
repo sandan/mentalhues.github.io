@@ -1,8 +1,8 @@
 drop table posts;
+drop table hues;
 drop table threads;
 drop table sessions;
 drop table users;
-
 
 create table users (
   id         serial primary key,
@@ -10,7 +10,7 @@ create table users (
   name       varchar(255),
   email      varchar(255) not null unique,
   password   varchar(255) not null,
-  img        bytea,
+  avatar     varchar(255),
   created_at timestamp not null   
 );
 
@@ -22,28 +22,31 @@ create table sessions (
   created_at timestamp not null   
 );
 
-create table wall (
+--Wall threads
+create table threads (
   id         serial primary key,
   uuid       varchar(64) not null unique,
-  topic      text,
-  img        bytea,
+  content    text,
+  img        varchar(256),
   user_id    integer references users(id),
   created_at timestamp not null       
 );
-
+--Posts per thread
 create table posts (
   id         serial primary key,
   uuid       varchar(64) not null unique,
   body       text,
   user_id    integer references users(id),
-  wall_id    integer references wall(id),
+  thread_id    integer references threads(id),
   created_at timestamp not null  
 );
-
+--table for the hues page
 create table hues (
   id         serial primary key,
   uuid       varchar(64) not null unique,
-  body      text,
+  body       text,
+  title      varchar(64),
+  featured   boolean,
   user_id    integer references users(id),
   created_at timestamp not null       
 );

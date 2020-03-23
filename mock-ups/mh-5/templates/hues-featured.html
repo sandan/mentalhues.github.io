@@ -1,4 +1,10 @@
 {{ define "featured" }}
+  <style>
+  .carousel-control-next,
+  .carousel-control-prev {
+      filter: invert(100%);
+  }
+  </style>
   <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -13,7 +19,7 @@
         <div class="carousel-item">
         {{ end }}
            <!-- The image should have an illustration art with the title, replace title with author and Body with a snippet -->
-          <img class="first-slide mx-auto d-block featured-art" src="/static/{{- $s.Images -}}" style="height:590px;width:1000px;">
+          <img class="first-slide mx-auto d-block featured-art" src="/static/{{- $s.Images -}}" style="height:500px;width:1200px;">
           <div class="carousel-caption d-none d-md-block">
               <a href="#" style="color:white"><h1> {{ $s.Title }}</h1></a>
               <p> {{ $s.Body }} </p>
