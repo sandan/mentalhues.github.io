@@ -140,3 +140,10 @@ func UserByUUID(uuid string) (user User, err error) {
         Scan(&user.Id, &user.Uuid, &user.Name, &user.Email, &user.Password, &user.CreatedAt)
     return
 }
+
+// Get a single hue given the UUID
+func HueByUUID(uuid string) (h Hue, err error) {
+    err = Db.QueryRow("SELECT id, uuid, body, title, featured, user_id, created_at FROM hues WHERE uuid = $1", uuid).
+        Scan(&h.Id, &h.Uuid, &h.Body, &h.Title, &h.Featured, &h.UserId, &h.CreatedAt)
+    return
+}

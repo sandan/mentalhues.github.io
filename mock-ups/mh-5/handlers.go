@@ -3,6 +3,7 @@ package main
 import(
   "html/template"
   "log"
+  "fmt"
   "net/http"
 )
 
@@ -11,6 +12,8 @@ type Info struct{
   Hues Hues
   Session bool
   Wall []Thread
+  UserHue Hue
+  UserInfo User
 }
 
 type Banner struct{
@@ -27,8 +30,8 @@ var(
     "Community",
     "Hues",
     "Gallery",
-    "Blog",
-    "Web Series",
+ //   "Blog",
+ //   "Web Series",
     "Podcast",
     "Store",
   },
@@ -98,10 +101,7 @@ func index(writer http.ResponseWriter, request *http.Request){
   templates = template.Must(templates.ParseFiles(files...))
 
   info.Banner.Active = "Community"
-  info.Banner.Body = "Feel their Stories"
-  if info.Session{
-    info.Banner.Body = "Feel their Stories, signed in user"
-  }
+  info.Banner.Body = "Feel Our Stories"
   info.Banner.Display = "/static/imgs/color-splash-red-blue.jpg"
   info.Wall = feed
   templates.Execute(writer, info)
@@ -135,12 +135,95 @@ func gallery(writer http.ResponseWriter, request *http.Request){
   templates = template.Must(templates.ParseFiles(files...))
 
   info.Banner.Active = "Gallery"
-  info.Banner.Body = "See their Stories"
+  info.Banner.Body = "See Our Stories"
   info.Banner.Display = "/static/imgs/color-splash-red-blue.jpg"
   templates.Execute(writer, info)
 }
 
 func hues(writer http.ResponseWriter, request *http.Request){
+
+  // check session
+  sess, err := session(writer, request)
+
+  files := []string{
+        "templates/index.html",
+  }
+
+  if err != nil{ // then user did not authenticate/set cookie
+        files = append(files, "templates/public.navbar.html")
+        info.Session = false
+      } else {
+        files = append(files, "templates/private.navbar.html")
+        info.Session = true
+  }
+
+  user, nouserr := sess.User()
+  if nouserr != nil {
+    // use the anonymous user with id 0
+    // this will allow user.CreateHue to work
+    // and we can use it in info.UserInfo
+    user = User{ Name: "Anonymous" }
+    log.Println("[hues]", user)
+  }
+
+  if request.Method == http.MethodGet{
+
+    vals := request.URL.Query()
+    uuid := vals.Get("id")
+
+    if uuid != "" { // read a specific hue
+      hue, err := HueByUUID(uuid)
+
+      if err != nil{
+        log.Println(err)
+      }
+
+      files = append(files, "templates/hue.html")
+      info.UserHue = hue
+      info.UserInfo = user
+
+    } else { // load all the hues
+
+      files = append(files,
+        "templates/body.html",
+        "templates/banner.html",
+        "templates/hues-featured.html",
+        "templates/hues.html",
+      )
+
+      info.Banner.Active = "Hues"
+      info.Banner.Body = "Read Our Stories"
+      info.Banner.Display = "/static/imgs/color-splash-red-blue.jpg"
+    }
+    files = append(files, "templates/footer.html")
+
+    funcMap := template.FuncMap{ "rhue": getRandomColor, "lower": lower }
+    templates := template.New("layout").Funcs(funcMap)
+    templates = template.Must(templates.ParseFiles(files...))
+
+    templates.Execute(writer, info)
+
+  } else if request.Method == http.MethodPost{
+
+    err := request.ParseForm()
+    if err != nil{
+      log.Println(err)
+    }
+
+    content := request.PostFormValue("text")
+    title := request.PostFormValue("title")
+    log.Println("[",title, "]", content)
+
+    h, err := user.CreateHue(content, title, false)
+    if  err != nil {
+     log.Println(err, "Cannot create thread")
+    }
+    url := fmt.Sprint("/hues/read?id=", h.Uuid)
+    http.Redirect(writer, request, url, 302)
+  }
+}
+
+func share(writer http.ResponseWriter, request *http.Request){
 
   files := []string{
     "templates/index.html",
@@ -157,24 +240,13 @@ func hues(writer http.ResponseWriter, request *http.Request){
   }
 
   files = append(files,
-    "templates/body.html",
-    "templates/banner.html",
-    "templates/hues-featured.html",
-    "templates/hues.html",
+    "templates/share.html",
     "templates/footer.html",
   )
-
-  funcMap := template.FuncMap{ "rhue": getRandomColor, "lower": lower }
-  templates := template.New("layout").Funcs(funcMap)
-  templates = template.Must(templates.ParseFiles(files...))
-
-  info.Banner.Active = "Hues"
-  info.Banner.Body = "Read their Stories"
-  info.Banner.Display = "/static/imgs/color-splash-red-blue.jpg"
-  templates.Execute(writer, info)
+  templates := template.Must(template.ParseFiles(files...))
+  templates.ExecuteTemplate(writer, "layout", nil)
 }
 
-func share(writer http.ResponseWriter, request *http.Request){}
 
 /* auth & identity handlers */
 // The signin.html has a form that redirects to /auth using POST
@@ -194,7 +266,7 @@ func signup(writer http.ResponseWriter, request *http.Request){
 func account(writer http.ResponseWriter, request *http.Request){
     err := request.ParseForm()
     if err != nil {
-        log.Println(err, "Cannot parse form")
+        log.Println(err, "[account] Cannot parse form")
     }
     user := User{
         Name:     request.PostFormValue("name"),
@@ -203,7 +275,7 @@ func account(writer http.ResponseWriter, request *http.Request){
     }
     //TODO: check for avatar if image field is set; save it on disk and place the path to it in User.Image
     if err := user.Create(); err != nil {
-        log.Println(err, "Cannot create user")
+        log.Println(err, "[account] Cannot create user")
     }
     http.Redirect(writer, request, "/signin", 302)
 }
@@ -260,10 +332,22 @@ func about(writer http.ResponseWriter, request *http.Request){
 
   files := []string{
     "templates/index.html",
-    "templates/navbar1.html",
+  }
+
+  // check session
+  _, err := session(writer, request)
+  if err != nil{ // then user did not authenticate/set cookie
+    files = append(files, "templates/public.navbar.html")
+    info.Session = false
+  } else {
+    files = append(files, "templates/private.navbar.html")
+    info.Session = true
+  }
+
+  files = append(files,
     "templates/about.html",
     "templates/footer.html",
-  }
+  )
   templates := template.Must(template.ParseFiles(files...))
   templates.ExecuteTemplate(writer, "layout", nil)
 }
@@ -271,10 +355,22 @@ func guidelines(writer http.ResponseWriter, request *http.Request){
 
   files := []string{
     "templates/index.html",
-    "templates/navbar1.html",
+  }
+
+  // check session
+  _, err := session(writer, request)
+  if err != nil{ // then user did not authenticate/set cookie
+    files = append(files, "templates/public.navbar.html")
+    info.Session = false
+  } else {
+    files = append(files, "templates/private.navbar.html")
+    info.Session = true
+  }
+
+  files = append(files,
     "templates/guidelines.html",
     "templates/footer.html",
-  }
+  )
   templates := template.Must(template.ParseFiles(files...))
   templates.ExecuteTemplate(writer, "layout", nil)
 }
@@ -282,10 +378,22 @@ func conduct(writer http.ResponseWriter, request *http.Request){
 
   files := []string{
     "templates/index.html",
-    "templates/navbar1.html",
+  }
+
+  // check session
+  _, err := session(writer, request)
+  if err != nil{ // then user did not authenticate/set cookie
+    files = append(files, "templates/public.navbar.html")
+    info.Session = false
+  } else {
+    files = append(files, "templates/private.navbar.html")
+    info.Session = true
+  }
+
+  files = append(files,
     "templates/conduct.html",
     "templates/footer.html",
-  }
+  )
   templates := template.Must(template.ParseFiles(files...))
   templates.ExecuteTemplate(writer, "layout", nil)
 }

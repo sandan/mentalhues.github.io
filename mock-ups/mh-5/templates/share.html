@@ -1,0 +1,100 @@
+
+
+{{ define "body" }}
+
+<!-- Include stylesheet -->
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+<div class="pt-5 pb-2">
+    <div class="row">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-6">
+        <form method="post" action="/hues" id="hueForm">
+
+          <div class="form-group">
+            <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="Title">
+          </div>
+
+          <div id="editor-container"></div>
+          <textarea name="text" style="display:none" id="hiddenArea"></textarea>
+          <div class="col text-center my-4 mb-4">
+            <button type="submit" class="btn btn-primary text-center">Submit</button>
+          </div>
+
+        </form>
+      </div>
+      <div class="col-lg-3"></div>
+    </div>
+</div>
+
+
+<!-- Include the Quill library -->
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<!-- Initialize Quill editor -->
+<script>
+            var toolbarOptions = [
+                ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+                //['blockquote', 'code-block'],
+
+                [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                //[{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+                [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+               // [{ 'direction': 'rtl' }],                         // text direction
+
+                //[{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+                //[ 'link', 'image', 'video' ],
+                [ 'link', 'image'],          // add's image support
+                [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+                //[{ 'font': [] }],
+                [{ 'align': [] }],
+
+                ['clean']                                         // remove formatting button
+            ];
+  var Delta = Quill.import('delta');
+  var quill = new Quill('#editor-container', {
+    modules: {
+      toolbar: toolbarOptions
+    },
+    placeholder: 'share your story...',
+    theme: 'snow'
+  });
+
+  // submit the form
+  $("#hueForm").on("submit",function(){
+  $("#hiddenArea").val(JSON.stringify(quill.getContents()));
+  //$("#hiddenArea").val($("#editor-container").html());
+  })
+
+  // Store accumulated changes
+  var change = new Delta();
+  quill.on('text-change', function(delta) {
+    change = change.compose(delta);
+  });
+
+  // Save periodically, just record a change for now
+  setInterval(function() {
+    if (change.length() > 0) {
+
+      /*
+      $.post('/hues', {
+        partial: JSON.stringify(change)
+      });
+
+      $.post('/hues', {
+        content: JSON.stringify(quill.getContents())
+      });
+
+      */
+      change = new Delta();
+    }
+  }, 5*1000);
+
+  // Check for unsaved data
+  window.onbeforeunload = function() {
+    if (change.length() > 0) {
+      return 'There are unsaved changes. Are you sure you want to leave?';
+    }
+  }
+  </script>
+
+{{ end }}

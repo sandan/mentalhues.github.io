@@ -1,3 +1,4 @@
+
 drop table posts;
 drop table hues;
 drop table threads;
@@ -13,6 +14,8 @@ create table users (
   avatar     varchar(255),
   created_at timestamp not null   
 );
+-- Set the system wide anonymous user to allow anonymous posts/hues
+insert into users values(0, '', 'Anonymous', '', '', null, now());
 
 create table sessions (
   id         serial primary key,
@@ -27,7 +30,6 @@ create table threads (
   id         serial primary key,
   uuid       varchar(64) not null unique,
   content    text,
-  img        varchar(256),
   user_id    integer references users(id),
   created_at timestamp not null       
 );

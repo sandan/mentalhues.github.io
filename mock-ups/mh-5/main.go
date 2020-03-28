@@ -48,6 +48,8 @@ func main(){
   mux.HandleFunc("/community", index)
   mux.HandleFunc("/gallery", gallery)
   mux.HandleFunc("/hues", hues)
+  mux.HandleFunc("/hues/read", hues)
+  mux.HandleFunc("/share", share)
 
   mux.HandleFunc("/about", about)
   mux.HandleFunc("/guidelines", guidelines)
@@ -60,7 +62,6 @@ func main(){
   mux.HandleFunc("/signup_account", account)
   mux.HandleFunc("/signout", signout)
 
-  //mux.HandleFunc("/share", share)
   //mux.HandleFunc("/contributors", contrib)
   //mux.HandleFunc("/podcast", podcast)
   //mux.HandleFunc("/publishing", volumes)

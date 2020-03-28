@@ -55,6 +55,7 @@ type Hue struct {
   Uuid       string
   Body       string // html or delta
   Title      string // optional title
+  Featured   bool
   Images     []string // list of references to images
   UserId     uint64 // Id of the User
   CreatedAt  time.Time
