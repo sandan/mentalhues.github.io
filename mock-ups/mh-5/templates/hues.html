@@ -1,5 +1,11 @@
 {{ define "body-layout" }}
 
+<style>
+.card-deck .card {
+    max-width: calc(25% - 30px);
+}
+</style>
+
   {{ template "featured" .Hues.Featured }}
 
 <div class="col text-center my-4 mb-4">
@@ -8,73 +14,31 @@
   </button>
 </div>
 
-<div class="card-group">
-  <div class="card">
-    <img class="card-img-top" src="https://place-hold.it/280x180" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="https://place-hold.it/280x180" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="https://place-hold.it/280x180" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="https://place-hold.it/280x180" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
 
-  <div class="card">
-    <img class="card-img-top" src="https://place-hold.it/280x180" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+{{ range $i, $hue := .Hues.Content }}
+  {{ if eq (mod $i 2) 0 }}
+    <div class="row">
+  {{ end }}
+          <div class="card align-items-center m-2" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4 mt-2 pl-4">
+                <a href="/hues/read?id={{- $hue.Uuid -}}"><img class="card-img-top" src="/static/imgs/butterfly.jpg" style="height:125px;width:125px;border-radius:50%;"></a>
+              </div>
+
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title"><a href="/hues/read?id={{- $hue.Uuid -}}"> {{- $hue.Title -}}</a></h5>
+                  <p class="card-text">by {{ $hue.User.Name -}}</p>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted"> Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+  {{ if or (eq (mod $i 2) (minus 2 1))  (eq (minus (len $.Hues.Content) 1) $i) }}
     </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="https://place-hold.it/280x180" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="https://place-hold.it/280x180" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="https://place-hold.it/280x180" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-</div>
+  {{ end }}
+{{ end }}
 
 <div class="card-columns">
  <div class="card">

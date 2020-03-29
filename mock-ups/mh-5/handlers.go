@@ -1,6 +1,7 @@
 package main
 
 import(
+  "time"
   "html/template"
   "log"
   "fmt"
@@ -12,8 +13,7 @@ type Info struct{
   Hues Hues
   Session bool
   Wall []Thread
-  UserHue Hue
-  UserInfo User
+  UserHue *Hue
 }
 
 type Banner struct{
@@ -38,6 +38,7 @@ var(
 }
 
  hues_info = Hues{
+  Display: 2,
   Featured: []Hue{
       Hue{
         Images: []string{"imgs/backtoback.jpg"},
@@ -130,7 +131,9 @@ func gallery(writer http.ResponseWriter, request *http.Request){
     "templates/footer.html",
   )
 
-  funcMap := template.FuncMap{ "rhue": getRandomColor, "lower": lower }
+  funcMap := template.FuncMap{ "rhue": getRandomColor,
+                               "lower": lower}
+
   templates := template.New("layout").Funcs(funcMap)
   templates = template.Must(templates.ParseFiles(files...))
 
@@ -161,7 +164,6 @@ func hues(writer http.ResponseWriter, request *http.Request){
   if nouserr != nil {
     // use the anonymous user with id 0
     // this will allow user.CreateHue to work
-    // and we can use it in info.UserInfo
     user = User{ Name: "Anonymous" }
     log.Println("[hues]", user)
   }
@@ -173,17 +175,16 @@ func hues(writer http.ResponseWriter, request *http.Request){
 
     if uuid != "" { // read a specific hue
       hue, err := HueByUUID(uuid)
-
       if err != nil{
         log.Println(err)
       }
 
       files = append(files, "templates/hue.html")
-      info.UserHue = hue
-      info.UserInfo = user
+      info.UserHue = &hue
 
     } else { // load all the hues
 
+      now := time.Now()
       files = append(files,
         "templates/body.html",
         "templates/banner.html",
@@ -191,13 +192,21 @@ func hues(writer http.ResponseWriter, request *http.Request){
         "templates/hues.html",
       )
 
+      hues,err := GetHues()
+      if err != nil{
+        log.Println("Error retrieving hues")
+      }
       info.Banner.Active = "Hues"
       info.Banner.Body = "Read Our Stories"
       info.Banner.Display = "/static/imgs/color-splash-red-blue.jpg"
+      info.Hues.Content = hues
     }
     files = append(files, "templates/footer.html")
 
-    funcMap := template.FuncMap{ "rhue": getRandomColor, "lower": lower }
+    funcMap := template.FuncMap{ "rhue": getRandomColor,
+                                 "lower": lower ,
+                                 "minus": func(i, j int) int { return i - j },
+                                 "mod": func(i, j int) int { return i%j }}
     templates := template.New("layout").Funcs(funcMap)
     templates = template.Must(templates.ParseFiles(files...))
 
@@ -212,7 +221,6 @@ func hues(writer http.ResponseWriter, request *http.Request){
 
     content := request.PostFormValue("text")
     title := request.PostFormValue("title")
-    log.Println("[",title, "]", content)
 
     h, err := user.CreateHue(content, title, false)
     if  err != nil {

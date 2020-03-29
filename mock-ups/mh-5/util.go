@@ -141,6 +141,24 @@ func UserByUUID(uuid string) (user User, err error) {
     return
 }
 
+
+// Get all hues in the database and returns it
+func GetHues() (hues []Hue, err error) {
+    rows, err := Db.Query("SELECT id, uuid, body, title, featured, user_id, created_at FROM hues")
+    if err != nil {
+        return
+    }
+    for rows.Next() {
+        hue := Hue{}
+        if err = rows.Scan(&hue.Id, &hue.Uuid, &hue.Body, &hue.Title, &hue.Featured, &hue.UserId, &hue.CreatedAt); err != nil {
+            return
+        }
+        hues = append(hues, hue)
+    }
+    rows.Close()
+    return
+}
+
 // Get a single hue given the UUID
 func HueByUUID(uuid string) (h Hue, err error) {
     err = Db.QueryRow("SELECT id, uuid, body, title, featured, user_id, created_at FROM hues WHERE uuid = $1", uuid).

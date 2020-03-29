@@ -62,5 +62,7 @@ type Hue struct {
 }
 
 type Hues struct {
-  Featured []Hue
+  Featured []Hue // list of featured hues
+  Content []Hue  // list of non-featured hues
+  Display int // number of hues per row
 }

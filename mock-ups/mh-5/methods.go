@@ -7,6 +7,16 @@ import(
   API for each type that is mapped to tables in types.go
  */
 
+/* Hue */
+
+// Get the user who started this hue
+func (hue *Hue) User() (user User) {
+    user = User{}
+    Db.QueryRow("SELECT id, uuid, name, email, created_at FROM users WHERE id = $1", hue.UserId).
+        Scan(&user.Id, &user.Uuid, &user.Name, &user.Email, &user.CreatedAt)
+    return
+}
+
 /* User events */
 // Create a new user, save user info into the database
 func (user *User) Create() (err error) {
